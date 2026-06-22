@@ -1,0 +1,80 @@
+body {
+    font-family: Arial;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+table {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+td {
+    padding: 6px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+th {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+tr:hover {
+    background-color: rgb(213, 213, 213);
+}
+
+.delete-btn img, .trash, .intimg {
+    width: 35px;
+    height: 35px;
+}
+
+.delete-btn, .role-btn :hover {
+    cursor: pointer;
+}
+
+.printbutton button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 9%;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0);    
+    padding: 7px 20px 7px 20px;
+}
+
+.printbutton button:hover {
+    background-color: blanchedalmond;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .printablearea, .printablearea * {
+        visibility: visible;
+    }
+}
+
+.adminback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

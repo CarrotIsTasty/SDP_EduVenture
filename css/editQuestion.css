@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    background-image: url('../img/lect-bg.jpeg');
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    padding-top: 100px;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-section {
+    display: flex;
+    background-color: rgba(0,0,0,0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 40%;
+    margin-left: 80px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-self: center;
+}
+
+.quiz-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.question {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.question label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.question textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: none;
+}
+
+.correct-answer textarea {
+    background-color: #e6ffe6;
+    border-color: #66cc66;
+    width: 300px;
+    height: 20px;
+}
+
+.fixed-button {
+    position: fixed;
+    top: 20vh;
+    right: 2vw;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.dropdown {
+    position: fixed;
+    top: 10vh;
+    right: 2vw;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.dropdown select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.showButton {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
