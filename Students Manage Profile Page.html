@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manage Profile Page</title>
+    <script src="https://kit.fontawesome.com/a6a6f2e015.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/student-navbar.css">
+    <script src="js/navbar.js"></script>
+    <link rel="icon" type="image/jpg" href="image/logo.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/04/pokemon-eevee-sitting-in-field-anime-preview-desktop-wallpaper.jpg'); 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px auto;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 70vh;
+            margin-top: 60px;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            background-image: url('img/manageprofile.jpg'); 
+            background-position: bottom;
+            background-size: cover;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto 20px auto;  
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .change-photo-text {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .profile-info {
+            width: 100%;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 20px;
+            color: #000000;
+            padding: 15px 0px 0px 0px;
+        }
+
+        .profile-info div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .profile-info label {
+            width: 30%;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .profile-info input, .profile-info select {
+            width: 50%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .profile-info input:focus, .profile-info select:focus {
+            border-color: #4285f4;
+            outline: none;
+        }
+
+        .profile-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .profile-buttons button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .profile-buttons button:hover {
+            background-color: #357ae8;
+        }
+
+        .error {
+            border-color: #e74c3c;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.875em;
+            display: none;
+        }
+
+        .profile-picture-selection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .profile-picture-selection img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: border 0.3s;
+        }
+
+        .profile-picture-selection img.selected {
+            border: 2px solid #4285f4;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li class="logo" onclick="closeSidebar()"><a href="studentmainmenu.php"><i class="fa-solid fa-xmark" style="color: #1f1f41; padding-right: 5px;"></i>  Close</a></li>
+            <li><a href="students-notes.html">Notes</a></li>
+            <li><a href="student-quiz-menu.php">Quiz</a></li>
+            <li><a href="student-contact.php">Contact Us</a></li>
+            <li><a href="Profile Page (Student).html">Profile</a></li>
+        </ul>
+        <ul>
+            <li class="logo"><a href="studentmainmenu.php"><img src="image/logo.jpg" alt=""></a></li> 
+            <li class="hideOnMobile"><a href="students-notes.html">Notes</a></li>
+            <li class="hideOnMobile"><a href="student-quiz-menu.php">Quiz</a></li>
+            <li class="hideOnMobile"><a href="student-contact.php">Contact Us</a></li>
+            <li class="hideOnMobile"><a href="Profile Page (Student).html">Profile</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars" style="color: #1f1f41;"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <form id="profile-form" action="php/update_profile.php" method="POST">
+                <div class="profile-picture">
+                    <span></span>
+                    <div class="change-photo-text">Change Photo</div>
+                </div>
+                <div class="profile-picture-selection">
+                </div>
+                <input type="hidden" id="selected-profile-picture" name="selected_profile_picture" value="">
+                <div class="profile-info">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="">
+                        <span class="error-message" id="name-error">Name is required.</span>
+                    </div>
+                    <div>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error-message" id="gender-error">Gender is required.</span>
+                    </div>
+                    <div>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" value="">
+                        <span class="error-message" id="dob-error">Date of Birth is required.</span>
+                    </div>
+                </div>
+                <div class="profile-buttons">
+                    <button type="button" onclick="window.location.href='studentmainmenu.php'">Back to Home</button>
+                    <button type="submit">Update Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/manageStudentProfile.js"></script>
+</body>
+</html>

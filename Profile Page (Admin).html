@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://kit.fontawesome.com/a6a6f2e015.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/student-navbar.css">
+    <script src="js/navbar.js"></script>
+    <link rel="icon" type="" href="image/logo.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('img/diamondwp.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 600px; 
+            margin: 10px auto; 
+            padding: 15px; 
+            box-shadow: inset 0 0 200px 1000px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow-y: auto; 
+            max-height: 70vh; 
+            margin-top: 60px; 
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px; 
+            background-color: #cccccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+        }
+
+        .profile-info {
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile-info div {
+            margin-bottom: 10px;
+        }
+
+        .profile-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-buttons a , button{
+            background-color: #325ca0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: small;
+        }
+
+        .profile-buttons button:hover {
+            background-color: #357ae8;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=closeSidebar()><a href="#"><i class="fa-solid fa-xmark" style="color: #1f1f41; padding-right: 5px;"></i>  Close</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+        <ul>
+            <li class="logo"><a href="adminmainmenu.php"><img src="img/sdplogo.jpg" alt=""></a></li>
+            <li class="hideOnMobile"><a href="managefeedbacklist.php">Feedback</a></li>
+            <li class="hideOnMobile"><a href="adminoptions.php">Users</a></li>
+            <li class="hideOnMobile"><a href="Profile Page (Admin).html">Profile</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars" style="color: #1f1f41;"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img id="profile-pic" src="">
+            </div>
+            <div class="profile-info">
+                <div id="user-name">Name: </div>
+                <div id="user-age">Age: </div>
+                <div id="user-gender">Gender: </div>
+                <div id="user-dob">Date of Birth: </div>
+            </div>
+            <div class="profile-buttons">
+                <a href="Admin Manage Profile Page.html">Manage Profile</a>
+                <a href="Admin Security Questions Password Recovery (Profile Page).php">Forget Password</a>
+                <button id="logout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar() {
+            document.querySelector('nav ul.sidebar').style.display = 'flex';
+        }
+
+        function closeSidebar() {
+            document.querySelector('nav ul.sidebar').style.display = 'none';
+        }
+    </script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/gamepage.css">
+    <link rel="stylesheet" href="css/student-navbar.css">
+    <link rel="stylesheet" href='quizfont/stylesheet.css'>
+    <script src="js/navbar.js"></script>
+</head>
+<body>
+    <div class="page-grid">
+        <div class="nav">
+            <nav>
+                <ul class="sidebar">
+                    <li class="logo" onclick="closeSidebar()"><a href="studentmainmenu.php"><i class="fa-solid fa-xmark" style="color: #1f1f41; padding-right: 5px;"></i>  Close</a></li>
+                    <li><a href="students-notes.html">Notes</a></li>
+                    <li><a href="student-quiz-menu.php">Quiz</a></li>
+                    <li><a href="student-contact.php">Contact Us</a></li>
+                    <li><a href="Profile Page (Student).html">Profile</a></li>
+                </ul>
+                <ul>
+                    <li class="logo"><a href="studentmainmenu.php"><img src="image/logo.jpg" alt=""></a></li> 
+                    <li class="hideOnMobile"><a href="students-notes.html">Notes</a></li>
+                    <li class="hideOnMobile"><a href="student-quiz-menu.php">Quiz</a></li>
+                    <li class="hideOnMobile"><a href="student-contact.php">Contact Us</a></li>
+                    <li class="hideOnMobile"><a href="Profile Page (Student).html">Profile</a></li>
+                    <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars" style="color: #1f1f41;"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div id="score" class="score">
+                <div class="score-content">
+                    <span class="close" id="closeScore">&times;</span>
+                    <p class="score-text">Scores</p>
+                    <p><span id="endMessage"></span></p>
+                    <p>Player 1 Health: <span id="scorePlayer1Health"></span></p>
+                    <p>Player 2 Health: <span id="scorePlayer2Health"></span></p>
+                    <p>Total Questions: <span id="scoreTotalQuestions"></span></p>
+                    <p>Answered Questions: <span id="scoreAnsweredQuestions"></span></p>
+                    <p>Correct Answers: <span id="scoreCorrectAnswers"></span></p>
+                </div>
+            </div>
+            
+            <div class="container-grid">
+                <div class="gamepage">
+                    <div class="gamepage-grid">
+                        <div class="status-one">
+                            <div class="info">
+                                <span class="name">PIKACHU</span>
+                            </div>
+                            <div class="hp-bar">
+                                <span class="hp-label">HP:</span>
+                                <div class="hp-bar-container">
+                                    <div class="hp-bar-inner" id="player1HP"></div>
+                                </div>
+                            </div>
+                            <div class="hp-text" id="hptext1">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="one" id="box-one">
+                            <img class="pika" src="img/pikabody.png" alt="Pikachu" id="pika-body">
+                            <img class="tail" src="img/tail.png" alt="Pikachu" id="pika-tail">
+                            <img class="ear1" src="img/earleft.png" alt="Pikachu" id="pika-ear1">
+                            <img class="ear2" src="img/earright.png" alt="Pikachu" id="pika-ear2">
+                        </div>
+                        <div class="platform">
+                            <img class="battleplatform" img src="img/battleplatform1.png">
+                        </div>
+                        <div class="outer-container" id="lightningContainer">
+                            <div class="lightning-container">
+                                <svg class="lightning lightning1" viewBox="0 0 100 100">
+                                    <polyline points="30,80 20,60 50,50 50,40 20,50 50,0" />
+                                </svg>
+                                <svg class="lightning lightning2" viewBox="0 0 100 100">
+                                    <polyline points="0,50 20,70 40,30 60,60 80,40 100,60" />
+                                </svg>
+                                <svg class="lightning lightning3" viewBox="0 0 100 100">
+                                    <polyline points="0,10,30,20,0,40,50,40,30,90" />
+                                </svg>
+                                <svg class="lightning lightning4" viewBox="0 0 100 100">
+                                    <polyline points="10,10,80,20,20,40,80,50,90,80,70,70" />
+                                </svg>
+                                <div class="glow-ball"></div>
+                            </div>
+                        </div>
+                        <div class="status-two">
+                            <div class="info">
+                                <span class="name">MEWTWO</span>
+                            </div>
+                            <div class="hp-bar">
+                                <span class="hp-label">HP:</span>
+                                <div class="hp-bar-container">
+                                    <div class="hp-bar-inner" id="player2HP"></div>
+                                </div>
+                            </div>
+                            <div class="hp-text" id="hptext2">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="two" id="box-two">
+                            <img class="mew" src="img/mewtwobody.png" alt="Mewtwo" id="mewtwo-body">
+                            <img class="mewtail" src="img/mewtwotail.png" alt="Mewtwo" id="mewtwo-tail">
+                        </div>
+                        <div class="platform1">
+                            <img class="battleplatform" img src="img/battleplatform1.png">
+                        </div>
+                        <div class="outer-container2" id="lightningContainer2">
+                            <div class="lightning-container2">
+                                <svg class="lightning-two lightning5" viewBox="0 0 100 100">
+                                    <polyline points="30,80 20,60 50,50 50,40 20,50 50,0" />
+                                </svg>
+                                <svg class="lightning-two lightning6" viewBox="0 0 100 100">
+                                    <polyline points="0,50 20,70 40,30 60,60 80,40 100,60" />
+                                </svg>
+                                <svg class="lightning-two lightning7" viewBox="0 0 100 100">
+                                    <polyline points="0,10,30,20,0,40,50,40,30,90" />
+                                </svg>
+                                <svg class="lightning-two lightning8" viewBox="0 0 100 100">
+                                    <polyline points="10,10,80,20,20,40,80,50,90,80,70,70" />
+                                </svg>
+                                <div class="glow-ball2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz">
+                    <div class="quiz-grid">
+                        <div class="question-design">
+                            <div class="layer1">
+                                <div class="layer2">
+                                    <div class="layer3">
+                                        <div class="question-box-design">
+                                            <div class="question-grid">
+                                                <div class="box1"></div>
+                                                <div class="box2"></div>
+                                                <div class="question">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="progress-bar" id="progress-bar"></div>
+                            <div class="timer" id="timer"></div>
+                        </div>
+                        <div class="answer">
+                            <div class="answer-grid" id="answerButtons">
+                                <button class="answer1 startAnimation">
+                                </button>
+                                <button class="answer2 startAnimation">
+                                </button>
+                                <button class="answer3 startAnimation">
+                                </button>
+                                <button class="answer4 startAnimation">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/gamepage.js"></script>
+</body>
+
+</html>

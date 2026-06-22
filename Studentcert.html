@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <title>Your Certificate</title>
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet'>
+</head>
+<body>
+    <div class="details">
+        <div class="text1">
+            CERTIFICATE<br>of</br>Achievement</br>
+        </div>
+        <div class="text2">
+            Presented to
+        </div>
+        <div class="studentname"></div>
+        <div class="text3">
+            for the<br>completion of</br>
+        </div>
+        <div class="text4">
+            EduVenture's Quiz Maniac
+        </div>
+        <div class="details2">
+            <div class="date"></div>
+            <div class="idnumber"></div>
+        </div>
+    </div>
+</body>
+<style>
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/certborder.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.details {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.details div {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.details2 {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.text1 {
+    font-family: 'Italianno';
+    font-size: 45px;
+}
+
+.text2 {
+    font-family: 'Jacques Francois';
+    font-size: 30px;
+}
+
+.studentname {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.text3 {
+    font-family: 'Jacques Francois';
+    font-size: 24px;
+}
+
+.text4 {
+    font-family: 'Jacques Francois';
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.date, .idnumber {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 5px 0;
+}
+</style>
+<script src="js/cert.js"></script>
+</html>

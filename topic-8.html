@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/topic.css">
+    <script src="https://kit.fontawesome.com/a6a6f2e015.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/student-navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/navbar.js"></script>
+    <link rel="icon" type="" href="image/logo.jpg">
+    <title>Topic 8: Implementation and Testing</title>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li class="logo" onclick="closeSidebar()"><a href="studentmainmenu.php"><i class="fa-solid fa-xmark" style="color: #1f1f41; padding-right: 5px;"></i>  Close</a></li>
+            <li><a href="students-notes.html">Notes</a></li>
+            <li><a href="student-quiz-menu.php">Quiz</a></li>
+            <li><a href="student-contact.php">Contact Us</a></li>
+            <li><a href="Profile Page (Student).html">Profile</a></li>
+        </ul>
+        <ul>
+            <li class="logo"><a href="studentmainmenu.php"><img src="image/logo.jpg" alt=""></a></li> 
+            <li class="hideOnMobile"><a href="students-notes.html">Notes</a></li>
+            <li class="hideOnMobile"><a href="student-quiz-menu.php">Quiz</a></li>
+            <li class="hideOnMobile"><a href="student-contact.php">Contact Us</a></li>
+            <li class="hideOnMobile"><a href="Profile Page (Student).html">Profile</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars" style="color: #1f1f41;"></i></a></li>
+        </ul>
+    </nav>
+    <a href="students-notes.html" class="back-button"><i class="fa-solid fa-arrow-left" style="color: white;"></i></a>
+    <div class="content-1">
+        <div class="topic"><h1>Topic 8: Implementation and Testing</h1></div>
+        <div class="img-1"><img src="image/implement.jpeg" alt=""></div>
+        <div class="title-1"><h2>Coding Standards</h2></div>
+        <div class="para-1"><p>Code not only needs to do its job well, but must also be easy to add to, maintain and debug. Needing to make changes to code could require a lot of energy to decipher lines of code that doesn’t make its purpose or intentions clear. Neatly commented with details that explain any complicated constructs and the reasoning behind them.</p></div>
+    </div>
+    <hr class="divider">
+    <div class="content-2">
+        <div class="title-2"><h1>Why need coding standards</h1></div>
+        <div class="para-2"><p>By following coding standards, it helps to make ur code have consistent look, imporve the readability, simplifies copying, editing, and maintance, and company wide standaziations.</p></div>
+    </div>
+
+    <div class="content-2">
+        <div class="title-2"><h1>Principle of Good Coding</h1></div>
+        <div class="para-2"><p>
+            1. KISS - Keep It Short and Simple <br>
+            2. DRY - Don't Repeat Yourself <br>
+            3. Abstraction - Each significant piece of functionality in a program should be implemented in just one place in the source code <br>
+            4. Open/Closed Principle - Software entities should be open for extension, but closed for modification. <br>
+            5. Maximize Coupling - Minimize the dependencies on other areas of code <br>
+            6. Maximize Cohension - Similar functionality should be in same components
+        </p></div>
+    </div><br><br>
+
+    <hr class="divider">
+    <div class="content-2">
+        <div class="title-2"><h1>Code Smells</h1></div>
+        <div class="para-2"><p>Code smells is any characteristic in the source code of a program that possibly indicates a deeper problem.
+            <br>1. Duplicated Code
+            <br>2. Large Classes 
+            <br>3. Long Methods
+            <br>4. Long Parameter List
+        </p></div>
+    </div>
+
+
+    <div class="content-2">
+        <div class="title-2"><h1>Refactoring</h1></div>
+        <div class="para-2"><p>Improve your software internal structure in a safe way while not changing / adding / removing behavior or external interfaces. +readable code, +simplified code, +easier to change, +easier to add new value, +reduced redundancy, advices how to go on to keep-improve software, and last but not least +automatic tests.
+
+        </p></div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="content-2">
+        <div class="title-2"><h1>Software Testing</h1></div>
+        <div class="para-2"><p>Testing is the process of exercising a program with the specific intent of finding errors prior to delivery to the end user. 
+            Each program must tested to make sure it functions correctly. For example,
+            Desk checking : the process of reviewing the program code to spot logic errors, which produce incorrect result
+        </p></div>
+    </div>
+    <div class="content-4">
+        <div class="title-4"><h1>Type of Testing</h1></div>
+        <div class="para-4"><p><span style="font-weight: 700;">Unit Testing</span>
+            <br><br>
+            - The testing of an individual program or modul.<br>
+            - Objective is to identify and eliminate execution errors that could cause the program to terminate abnormally, and logic errors that could have been missed during desk checking<br>
+        </p></div><br><br><br>
+    </div>
+    <div class="content-4">
+        <div class="para-4"><p><span style="font-weight: 700;">System Testing</span>
+            <br><br>
+            - Verify that all system components are integrated properly and that actual processing situations will be handled correctly <br>
+            - Confirm that the information system can handle predicted volumes of data in a timely and efficient manner
+            </p></div><br><br><br>
+    </div>
+    <div class="content-4">
+        <div class="para-4"><p><span style="font-weight: 700;">Integration Testing</span>
+            <br><br>
+            - Testing two or more programs that depend on each other to make sure that the programs work together properly
+            </p></div><br><br><br>
+    </div>
+
+    <hr class="divider">
+    <br><br>
+    <div class="content-3">
+        <div class="img-3"><img src="image/notes/test-plan.png" alt=""></div>
+    </div>
+    <div class="content-5">
+        <div class="title-5"><h1>Test Plan</h1></div>
+        <div class="para-5"><p>Test plan is a type of document to have all testing script such as testing steps, expected and actual result, remarks and test case. </p> </div>
+        <div class="list-5a">
+            <ul>
+                <li><p>Used as a guide to test software</p></li>
+                <li><p>Uses ‘dummy data’ (sample data)</p></li>
+            </ul>
+        </div>
+        <div class="list-5b">
+            <ul>
+                <li><p>Usually prepared before software is built</p></li>
+                <li><p>Prepared by ‘software testers’</p></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="d-btn"><a href="slide_download.php?TopicID=8"><button class="download-btn">Download Slide</button></a></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="image/logo.jpg" alt="EduVenture Logo" class="footer-logo">
+                <span class="footer-text">EduVenture</span>
+            </div>
+            <div class="footer-right">
+                <span style="color: #B6B6B6 ;">2024 @ EduVenture Inc.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

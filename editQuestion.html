@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Form</title>
+    <link rel="stylesheet" href="css/student-navbar.css">
+    <link rel="stylesheet" href="css\editQuestion.css">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul class="sidebar">
+                <li onclick="closeSidebar()"><a href="#"><i class="fa-solid fa-xmark" style="color: #1f1f41; padding-right: 5px;"></i>  Close</a></li>
+                <li><a href="lecture-note.php">Manage Notes</a></li>
+                <li><a href="editQuestion.html">Manage Quiz</a></li>
+                <li><a href="leaderboard-2.php?topic_id=1">Performance</a></li>
+                <li><a href="Profile Page (Lecturer).html">Profile</a></li>
+            </ul>
+            <ul>
+                <li class="logo"><a href="lecturermainmenu.php"><img src="image/logo.jpg" alt=""></a></li>
+                <li class="hideOnMobile"><a href="lecture-note.php">Manage Notes</a></li>
+                <li class="hideOnMobile"><a href="editQuestion.html">Manage Quiz</a></li>
+                <li class="hideOnMobile"><a href="leaderboard-2.php?topic_id=1">Performance</a></li>
+                <li class="hideOnMobile"><a href="Profile Page (Lecturer).html">Profile</a></li>
+                <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars" style="color: #1f1f41;"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dropdown">
+        <select id="topicDropdown">
+            <option value="">Select a Topic</option>
+        </select>
+        <button class="showButton" id="show-button">Show Questions</button>
+    </div>
+
+    <form class="form-container" method="post" id="quizForm" action="php/updateQuestions.php">
+        <button type="submit" class="fixed-button">Save</button>
+    </form>
+
+    <script src="js/editQuestions.js"></script>
+</body>
+</html>
